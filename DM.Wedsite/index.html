@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SkyGrow Marketing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Sky<span>Grow</span></div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<!-- SLIDER -->
+
+<div class="slider">
+  <div class="slides">
+
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+
+  </div>
+</div>
+
+
+<!-- SERVICES -->
+
+<section>
+
+  <div class="title">
+    <h2>Our Services</h2>
+  </div>
+
+  <div class="grid">
+
+    <div class="box">
+      <h3>SEO</h3>
+      <p>Google Ranking</p>
+    </div>
+
+    <div class="box">
+      <h3>Social Media</h3>
+      <p>Brand Growth</p>
+    </div>
+
+    <div class="box">
+      <h3>Ads</h3>
+      <p>Paid Promotion</p>
+    </div>
+
+    <div class="box">
+      <h3>Content</h3>
+      <p>Marketing</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 SkyGrow Marketing
+</footer>
+
+
+<!-- SCRIPT -->
+
+<script>
+
+/* Page Transition */
+
+document.querySelectorAll("a").forEach(link=>{
+
+  link.addEventListener("click",function(e){
+
+    if(this.getAttribute("href").includes(".html")){
+
+      e.preventDefault();
+
+      document.body.style.opacity="0";
+
+      setTimeout(()=>{
+        window.location=this.href;
+      },300);
+
+    }
+
+  });
+
+});
+
+
+/* Active Navbar */
+
+let currentPage = location.pathname.split("/").pop();
+
+if(currentPage === ""){
+  currentPage = "index.html";
+}
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+  if(link.getAttribute("href") === currentPage){
+    link.classList.add("active");
+  }
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Services</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">Sky<span>Grow</span></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="campaigns.html">Campaigns</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<div class="title"><h2>Our Services</h2></div>
+<div class="grid">
+<div class="box"><h3>Search Engine Optimization(SEO)</h3><p>Improve website ranking & organic traffic.</p></div>
+<div class="box"><h3>Social Media</h3><p>Manage Instagram, Facebook & LinkedIn.</p></div>
+<div class="box"><h3>Google Ads</h3><p>Run high‑converting paid campaigns.</p></div>
+<div class="box"><h3>Content Marketing</h3><p>Create engaging blogs & creatives.</p></div>
+<div class="box"><h3>Email Marketing</h3><p>Automated email sales funnels.</p></div>
+<div class="box"><h3>Influencer Marketing</h3><p>Promote through influencers.</p></div>
+</div>
+</section>
+
+
+
+
+<footer>© 2026 SkyGrow Marketing</footer>
+
+
+<script>
+/* Page Transition Effect */
+
+document.querySelectorAll("a").forEach(link=>{
+  link.addEventListener("click",function(e){
+
+    if(this.getAttribute("href").includes(".html")){
+      e.preventDefault();
+
+      document.body.style.opacity="0";
+
+      setTimeout(()=>{
+        window.location=this.href;
+      },300);
+    }
+
+  });
+});
+
+
+/* Active Navbar Effect */
+
+const links = document.querySelectorAll("nav a");
+const currentPage = location.pathname.split("/").pop();
+
+links.forEach(link=>{
+  if(link.getAttribute("href") === currentPage){
+    link.classList.add("active");
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Pricing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">Sky<span>Grow</span></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="campaigns.html">Campaigns</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<div class="title">
+<h2>Pricing Plans</h2>
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
+<div class="card-body">
+<h3>Basic Plan</h3>
+<div class="price-tag">₹1999</div>
+<p>SEO + Social Media</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<div class="card-body">
+<h3>Standard Plan</h3>
+<div class="price-tag">₹3999</div>
+<p>SEO + Ads + Content</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<div class="card-body">
+<h3>Premium Plan</h3>
+<div class="price-tag">₹6999</div>
+<p>All Digital Services</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<footer>© 2026 SkyGrow Marketing</footer>
+
+<script>
+/* Page Transition Effect */
+
+document.querySelectorAll("a").forEach(link=>{
+  link.addEventListener("click",function(e){
+
+    if(this.getAttribute("href").includes(".html")){
+      e.preventDefault();
+
+      document.body.style.opacity="0";
+
+      setTimeout(()=>{
+        window.location=this.href;
+      },300);
+    }
+
+  });
+});
+
+
+/* Active Navbar Effect */
+
+const links = document.querySelectorAll("nav a");
+const currentPage = location.pathname.split("/").pop();
+
+links.forEach(link=>{
+  if(link.getAttribute("href") === currentPage){
+    link.classList.add("active");
+  }
+});
+</script>
+
+
+</body>
+</html>
+

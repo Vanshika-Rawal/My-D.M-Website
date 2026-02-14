@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Campaigns</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+<div class="logo">Sky<span>Grow</span></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="campaigns.html">Campaigns</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section>
+<div class="title">
+<h2>Our Campaigns</h2>
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<div class="card-body">
+<h3>Facebook Ads</h3>
+<p>Reach more customers using Facebook.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="card-body">
+<h3>Google Ads</h3>
+<p>Boost traffic with Google Ads.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div class="card-body">
+<h3>Brand Promotion</h3>
+<p>Build your brand identity.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<footer>© 2026 SkyGrow Marketing</footer>
+<script>
+/* Page Transition Effect */
+
+document.querySelectorAll("a").forEach(link=>{
+  link.addEventListener("click",function(e){
+
+    if(this.getAttribute("href").includes(".html")){
+      e.preventDefault();
+
+      document.body.style.opacity="0";
+
+      setTimeout(()=>{
+        window.location=this.href;
+      },300);
+    }
+
+  });
+});
+
+
+/* Active Navbar Effect */
+
+const links = document.querySelectorAll("nav a");
+const currentPage = location.pathname.split("/").pop();
+
+links.forEach(link=>{
+  if(link.getAttribute("href") === currentPage){
+    link.classList.add("active");
+  }
+});
+</script>
+
+
+</body>
+</html>

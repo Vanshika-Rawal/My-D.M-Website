@@ -1,0 +1,338 @@
+/* ===== code ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+  background:#f9fbff;
+  color:#333;
+  animation:fadeIn 0.8s ease;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:#8a99ad;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  padding:15px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+/* ===== LOGO ===== */
+.logo{
+  font-size:24px;
+  font-weight:600;
+  color:#fff;
+}
+
+.logo span{
+  color:#111;
+}
+
+/* ===== NAVBAR ===== */
+nav a{
+  position:relative;
+  margin-left:20px;
+  padding:6px 0;
+  color:#fff;
+  font-weight:500;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+/* ===== NAVBAR BOX EFFECT ===== */
+
+nav a{
+  margin-left:20px;
+  padding:6px 14px;
+  border-radius:20px;
+  color:#fff;
+  font-weight:500;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+/* Hover Effect */
+nav a:hover{
+  background:rgba(255,255,255,0.25);
+  color:#333;
+}
+
+/* Active Page Effect */
+nav a.active{
+  background:rgba(255,255,255,0.35);
+  color:#333;
+  font-weight:600;
+}
+
+
+/* Hover */
+nav a:hover::after{
+  width:100%;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+/* Active Page */
+nav a.active::after{
+  width:100%;
+}
+
+
+/* ===== SLIDER ===== */
+.slider{
+  height:400px;
+  overflow:hidden;
+}
+
+.slides{
+  display:flex;
+  width:300%;
+  animation:slide 12s infinite;
+}
+
+.slides img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+
+@keyframes slide{
+  0%{margin-left:0}
+  33%{margin-left:-100%}
+  66%{margin-left:-200%}
+  100%{margin-left:0}
+}
+
+
+/* ===== SECTION ===== */
+section{
+  padding:60px 8%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.title h2{
+  font-size:42px;
+  color:#000;
+}
+
+
+/* ===== BOXES ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.box{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.box:hover{
+  transform:translateY(-5px);
+}
+
+.box h3{
+  color:#000;
+  margin-bottom:10px;
+  font-size: 25px;
+}
+
+.box p{
+  font-size: 15px;
+}
+
+
+/* ===== ABOUT =====
+.about{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  max-width:400px;
+  border-radius:10px;
+}
+
+.about-text{
+  flex:1;
+} */
+
+/* About Grid Section */
+
+.about-section{
+  padding:70px 10%;
+  background:#f4f7fb;
+  text-align:center;
+}
+
+.about-section h2{
+  font-size:36px;
+  margin-bottom:40px;
+  color:#222;
+}
+
+
+/* Grid */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+
+/* Cards */
+
+.about-box{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.about-box:hover{
+  transform:translateY(-8px);
+}
+
+
+/* Image */
+
+.about-box img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+
+/* Text */
+
+.about-box h3{
+  font-size:22px;
+  margin:15px 0 10px;
+  color:#0000; 
+}
+
+.about-box p{
+  padding:0 15px 20px;
+  color:#444;
+  font-size:15px;
+  line-height:1.5;
+}
+
+
+
+/* ===== CONTACT ===== */
+.contact-form{
+  max-width:600px;
+  margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+.contact-form button{
+  background:#000;
+  color:#fff;
+  padding:12px 25px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+
+/* ===== CARDS ===== */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card-body{
+  padding:15px;
+}
+
+.card-body h3{
+  margin-bottom:5px;
+}
+
+.card-body p{
+  color:#555;
+  font-size:14px;
+}
+
+.price-tag{
+  font-size:22px;
+  color:#8a99ad;
+  font-weight:600;
+  margin:10px 0;
+}
+
+
+/* ===== FOOTER ===== */
+footer{
+  background:#8a99ad;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+}
+
+
+/* ===== PAGE ANIMATION ===== */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
