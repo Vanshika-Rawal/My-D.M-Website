@@ -1,94 +1,103 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Pricing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyGrow | Pricing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-<div class="logo">Sky<span>Grow</span></div>
-<nav>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">🚀 SkyGrow</div>
+<div class="nav-links">
 <a href="index.html">Home</a>
-<a href="services.html">Services</a>
 <a href="about.html">About</a>
+<a href="services.html">Services</a>
 <a href="campaigns.html">Campaigns</a>
-<a href="pricing.html">Pricing</a>
+<a href="pricing.html" class="active">Pricing</a>
 <a href="contact.html">Contact</a>
+</div>
 </nav>
-</header>
 
-<section>
-<div class="title">
-<h2>Pricing Plans</h2>
-</div>
-
-<div class="card-grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
-<div class="card-body">
-<h3>Basic Plan</h3>
-<div class="price-tag">₹1999</div>
-<p>SEO + Social Media</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<div class="card-body">
-<h3>Standard Plan</h3>
-<div class="price-tag">₹3999</div>
-<p>SEO + Ads + Content</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-<div class="card-body">
-<h3>Premium Plan</h3>
-<div class="price-tag">₹6999</div>
-<p>All Digital Services</p>
-</div>
-</div>
-
-</div>
+<!-- HERO -->
+<section class="pricing-hero">
+<h1>Choose Your Plan</h1>
+<p>Flexible pricing for every stage of your business.</p>
 </section>
 
+<!-- TOGGLE -->
+<div class="toggle-container">
+<span>Monthly</span>
+<label class="switch">
+<input type="checkbox" id="togglePlan">
+<span class="slider"></span>
+</label>
+<span>Yearly</span>
+</div>
 
-<footer>© 2026 SkyGrow Marketing</footer>
+<!-- PRICING CARDS -->
+<section class="pricing-section">
+
+<div class="pricing-card">
+<h3>Starter</h3>
+<h2 class="price" data-month="₹4,999" data-year="₹49,999">₹4,999</h2>
+<ul>
+<li>SEO Optimization</li>
+<li>Social Media Management</li>
+<li>Basic Ads Setup</li>
+<li>Email Support</li>
+</ul>
+<button>Get Started →</button>
+</div>
+
+<div class="pricing-card popular">
+<div class="badge">Most Popular</div>
+<h3>Growth</h3>
+<h2 class="price" data-month="₹9,999" data-year="₹99,999">₹9,999</h2>
+<ul>
+<li>Advanced SEO</li>
+<li>Social Media + Ads</li>
+<li>Content Marketing</li>
+<li>Priority Support</li>
+</ul>
+<button>Get Started →</button>
+</div>
+
+<div class="pricing-card">
+<h3>Pro</h3>
+<h2 class="price" data-month="₹19,999" data-year="₹1,99,999">₹19,999</h2>
+<ul>
+<li>Full Marketing Strategy</li>
+<li>Google Ads + Influencer</li>
+<li>Email Automation</li>
+<li>24/7 Premium Support</li>
+</ul>
+<button>Get Started →</button>
+</div>
+
+</section>
 
 <script>
-/* Page Transition Effect */
+const toggle = document.getElementById("togglePlan");
+const prices = document.querySelectorAll(".price");
 
-document.querySelectorAll("a").forEach(link=>{
-  link.addEventListener("click",function(e){
-
-    if(this.getAttribute("href").includes(".html")){
-      e.preventDefault();
-
-      document.body.style.opacity="0";
-
-      setTimeout(()=>{
-        window.location=this.href;
-      },300);
-    }
-
-  });
+toggle.addEventListener("change", ()=>{
+prices.forEach(price=>{
+price.textContent = toggle.checked ? price.dataset.year : price.dataset.month;
 });
-
-
-/* Active Navbar Effect */
-
-const links = document.querySelectorAll("nav a");
-const currentPage = location.pathname.split("/").pop();
-
-links.forEach(link=>{
-  if(link.getAttribute("href") === currentPage){
-    link.classList.add("active");
-  }
 });
 </script>
 
+<footer>
+<h3>SkyGrow – Digital Marketing Agency</h3>
+<p>Grow smarter. Market better. Achieve more.</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
-

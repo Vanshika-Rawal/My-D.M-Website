@@ -1,126 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>SkyGrow Marketing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyGrow | Home</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
 
-<header>
-  <div class="logo">Sky<span>Grow</span></div>
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">🚀 SkyGrow</div>
+<div class="nav-links">
+<a href="index.html"class="active">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="campaigns.html">Campaigns</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="campaigns.html">Campaigns</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-
-<!-- SLIDER -->
+<!-- HERO -->
+<section class="hero">
 
 <div class="slider">
-  <div class="slides">
-
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-
-  </div>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71');"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786');"></div>
 </div>
 
+<div class="overlay"></div>
 
-<!-- SERVICES -->
-
-<section>
-
-  <div class="title">
-    <h2>Our Services</h2>
-  </div>
-
-  <div class="grid">
-
-    <div class="box">
-      <h3>SEO</h3>
-      <p>Google Ranking</p>
-    </div>
-
-    <div class="box">
-      <h3>Social Media</h3>
-      <p>Brand Growth</p>
-    </div>
-
-    <div class="box">
-      <h3>Ads</h3>
-      <p>Paid Promotion</p>
-    </div>
-
-    <div class="box">
-      <h3>Content</h3>
-      <p>Marketing</p>
-    </div>
-
-  </div>
+<div class="hero-content">
+<h1>Scaling Brands With Digital Excellence</h1>
+<p>We create powerful marketing campaigns that convert traffic into revenue.</p>
+<button class="btn">Start Growing</button>
+</div>
 
 </section>
 
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
 
-<footer>
-  © 2026 SkyGrow Marketing
-</footer>
+<div class="services-grid">
 
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+<h3>SEO Strategy</h3>
+<p>Rank your website higher & attract quality traffic.</p>
+</div>
 
-<!-- SCRIPT -->
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/3534/3534064.png">
+<h3>Social Media Growth</h3>
+<p>Build powerful brand presence online.</p>
+</div>
 
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/681/681494.png">
+<h3>Paid Advertising</h3>
+<p>Maximize ROI with smart targeting ads.</p>
+</div>
+
+</div>
+</section>
+
+<!-- SLIDER SCRIPT -->
 <script>
+let slides=document.querySelectorAll(".slide");
+let index=0;
 
-/* Page Transition */
-
-document.querySelectorAll("a").forEach(link=>{
-
-  link.addEventListener("click",function(e){
-
-    if(this.getAttribute("href").includes(".html")){
-
-      e.preventDefault();
-
-      document.body.style.opacity="0";
-
-      setTimeout(()=>{
-        window.location=this.href;
-      },300);
-
-    }
-
-  });
-
-});
-
-
-/* Active Navbar */
-
-let currentPage = location.pathname.split("/").pop();
-
-if(currentPage === ""){
-  currentPage = "index.html";
+function showSlide()
+{
+slides.forEach(slide=>slide.classList.remove("active"));
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
 }
-
-document.querySelectorAll("nav a").forEach(link=>{
-
-  if(link.getAttribute("href") === currentPage){
-    link.classList.add("active");
-  }
-
-});
-
+setInterval(showSlide,4000);
 </script>
+
+<!-- FOOTER -->
+<footer id="contact"> 
+<h3>SkyGrow – Digital Marketing Agency</h3>
+<p>Grow smarter. Market better. Achieve more.</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
 
 </body>
 </html>

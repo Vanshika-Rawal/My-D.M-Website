@@ -1,72 +1,136 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyGrow | Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<div class="logo">Sky<span>Grow</span></div>
-<nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">🚀 SkyGrow</div>
+<div class="nav-links">
 <a href="index.html">Home</a>
-<a href="services.html">Services</a>
 <a href="about.html">About</a>
+<a href="services.html" class="active">Services</a>
 <a href="campaigns.html">Campaigns</a>
 <a href="pricing.html">Pricing</a>
 <a href="contact.html">Contact</a>
-</nav>
-</header>
-
-<section>
-<div class="title"><h2>Our Services</h2></div>
-<div class="grid">
-<div class="box"><h3>Search Engine Optimization(SEO)</h3><p>Improve website ranking & organic traffic.</p></div>
-<div class="box"><h3>Social Media</h3><p>Manage Instagram, Facebook & LinkedIn.</p></div>
-<div class="box"><h3>Google Ads</h3><p>Run high‑converting paid campaigns.</p></div>
-<div class="box"><h3>Content Marketing</h3><p>Create engaging blogs & creatives.</p></div>
-<div class="box"><h3>Email Marketing</h3><p>Automated email sales funnels.</p></div>
-<div class="box"><h3>Influencer Marketing</h3><p>Promote through influencers.</p></div>
 </div>
+</nav>
+
+
+<!-- Hero Section (NO IMAGE) -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>Our Digital Services</h1>
+            <p>Smart strategies that grow your business online</p>
+        </div>
+    </section>
+    
+<!-- SERVICES -->
+<section class="services-section">
+
+<button class="arrow left">&#10094;</button>
+
+<div class="slider-wrapper">
+    <div class="service-slider">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800">
+            <h3>Search Engine Optimization</h3>
+            <p>Improve website ranking & organic traffic.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800">
+            <h3>Social Media Management</h3>
+            <p>Manage Instagram, Facebook & LinkedIn.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800">
+            <h3>Google Ads</h3>
+            <p>Run high-converting paid campaigns.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800">
+            <h3>Content Marketing</h3>
+            <p>Create engaging blogs & creatives.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800">
+            <h3>Email Marketing</h3>
+            <p>Automated email sales funnels.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800">
+            <h3>Influencer Marketing</h3>
+            <p>Promote through influencers.</p>
+        </div>
+
+    </div>
+</div>
+
+<button class="arrow right">&#10095;</button>
+
 </section>
 
 
-
-
-<footer>© 2026 SkyGrow Marketing</footer>
-
-
 <script>
-/* Page Transition Effect */
+const cards = document.querySelectorAll(".service-card");
+const next = document.querySelector(".right");
+const prev = document.querySelector(".left");
 
-document.querySelectorAll("a").forEach(link=>{
-  link.addEventListener("click",function(e){
+let index = 0;
 
-    if(this.getAttribute("href").includes(".html")){
-      e.preventDefault();
+function updateSlider(){
+cards.forEach((card,i)=>{
+card.classList.remove("active","left-card","right-card");
 
-      document.body.style.opacity="0";
+if(i === index){
+card.classList.add("active");
+}
+else if(i === index - 1){
+card.classList.add("left-card");
+}
+else if(i === index + 1){
+card.classList.add("right-card");
+}
+});
+}
 
-      setTimeout(()=>{
-        window.location=this.href;
-      },300);
-    }
-
-  });
+next.addEventListener("click",()=>{
+if(index < cards.length -1){
+index++;
+updateSlider();
+}
 });
 
-
-/* Active Navbar Effect */
-
-const links = document.querySelectorAll("nav a");
-const currentPage = location.pathname.split("/").pop();
-
-links.forEach(link=>{
-  if(link.getAttribute("href") === currentPage){
-    link.classList.add("active");
-  }
+prev.addEventListener("click",()=>{
+if(index > 0){
+index--;
+updateSlider();
+}
 });
+
+updateSlider();
 </script>
+
+ <!-- FOOTER -->
+<footer id="contact"> 
+<h3>SkyGrow – Digital Marketing Agency</h3>
+<p>Grow smarter. Market better. Achieve more.</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
 
 </body>
 </html>

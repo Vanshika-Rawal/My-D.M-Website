@@ -1,90 +1,84 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Campaigns</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Campaigns - SkyGrow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Correct CSS Link -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<header>
-<div class="logo">Sky<span>Grow</span></div>
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="campaigns.html">Campaigns</a>
-<a href="pricing.html">Pricing</a>
-<a href="contact.html">Contact</a>
+
+<!-- ==== NAVBAR ==== -->
+<nav class="navbar">
+  <div class="logo">🚀 SkyGrow</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="campaigns.html" class="active">Campaigns</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
-</header>
+<!-- Hero Section (NO IMAGE) -->
+    <section class="campaigns-hero">
+        <div class="hero-content">
+            <h1>Our Marketing Campaigns</h1>
+            <p>Real performance-driven campaigns that generated measurable growth</p>
+        </div>
+    </section>
 
-<section>
-<div class="title">
-<h2>Our Campaigns</h2>
-</div>
+<!-- ===== SECTION ===== -->
+<section class="section">
 
-<div class="card-grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-<div class="card-body">
-<h3>Facebook Ads</h3>
-<p>Reach more customers using Facebook.</p>
-</div>
-</div>
+  <div class="campaign-container">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<div class="card-body">
-<h3>Google Ads</h3>
-<p>Boost traffic with Google Ads.</p>
-</div>
-</div>
+    <!-- Instagram Growth -->
+    <div class="campaign-card">
+      <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113" alt="Instagram Campaign">
+      <div class="campaign-content">
+        <h3>Instagram Growth Campaign</h3>
+        <p>Strategic content + engagement tactics to grow audience organically.</p>
+        <div class="stats">📈 +250% Engagement | +15K Followers</div>
+        <a href="#" class="btn">View Case Study</a>
+      </div>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div class="card-body">
-<h3>Brand Promotion</h3>
-<p>Build your brand identity.</p>
-</div>
-</div>
+    <!-- Google Ads -->
+    <div class="campaign-card">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Google Ads Campaign">
+      <div class="campaign-content">
+        <h3>Google Ads Campaign</h3>
+        <p>High-converting search & display ads targeting ready-to-buy customers.</p>
+        <div class="stats">💰 4X ROI | 60% Lower CPC</div>
+        <a href="#" class="btn">View Case Study</a>
+      </div>
+    </div>
 
-</div>
+    <!-- Influencer Marketing -->
+    <div class="campaign-card">
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="Influencer Marketing Campaign">
+      <div class="campaign-content">
+        <h3>Influencer Marketing Campaign</h3>
+        <p>Partnered with niche influencers to increase brand trust and visibility.</p>
+        <div class="stats">🔥 1M+ Reach | 35% Sales Growth</div>
+        <a href="#" class="btn">View Case Study</a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-
-<footer>© 2026 SkyGrow Marketing</footer>
-<script>
-/* Page Transition Effect */
-
-document.querySelectorAll("a").forEach(link=>{
-  link.addEventListener("click",function(e){
-
-    if(this.getAttribute("href").includes(".html")){
-      e.preventDefault();
-
-      document.body.style.opacity="0";
-
-      setTimeout(()=>{
-        window.location=this.href;
-      },300);
-    }
-
-  });
-});
-
-
-/* Active Navbar Effect */
-
-const links = document.querySelectorAll("nav a");
-const currentPage = location.pathname.split("/").pop();
-
-links.forEach(link=>{
-  if(link.getAttribute("href") === currentPage){
-    link.classList.add("active");
-  }
-});
-</script>
-
+<!-- FOOTER -->
+<footer id="contact"> 
+  <h3>SkyGrow – Digital Marketing Agency</h3>
+  <p>Grow smarter. Market better. Achieve more.</p>
+  <p>© 2026 All Rights Reserved</p>
+</footer>
 
 </body>
 </html>

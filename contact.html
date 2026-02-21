@@ -1,65 +1,108 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Contact</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<header>
-<div class="logo">Sky<span>Grow</span></div>
-<nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">🚀 SkyGrow</div>
+<div class="nav-links">
 <a href="index.html">Home</a>
-<a href="services.html">Services</a>
 <a href="about.html">About</a>
+<a href="services.html">Services</a>
 <a href="campaigns.html">Campaigns</a>
 <a href="pricing.html">Pricing</a>
-<a href="contact.html">Contact</a>
+<a href="contact.html"class="active">Contact</a>
+</div>
 </nav>
-</header>
+<!-- Hero Section (NO IMAGE) -->
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Grow your business online</p>
+        </div>
+    </section>
 
-<section>
-<div class="title"><h2>Contact Us</h2></div>
-<form class="contact-form">
-<input type="text" placeholder="Name" required>
-<input type="email" placeholder="Email" required>
-<textarea placeholder="Message"></textarea>
-<button>Send Message</button>
-</form>
+<!-- SERVICES -->
+<section class="contact-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="left-side">
+        <h1>Let’s Grow Your Brand Online</h1>
+
+<ul>
+    <li>✔ Free growth strategy consultation within 12 hours</li>
+    <li>✔ Custom performance-driven marketing roadmap</li>
+    <li>✔ Dedicated digital marketing expert for your brand</li>
+</ul>
+
+<div class="contact-extra">
+    <p class="email">growth@skygrowagency.com</p>
+    <p>Ready to generate more leads, sales and brand visibility?</p>
+    <button class="call-btn">Book Free Strategy Call</button>
+</div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-side">
+
+        <form>
+
+            <h4>What Services Do You Need?</h4>
+<div class="pill-group">
+    <span class="pill">SEO Optimization</span>
+    <span class="pill">Social Media Marketing</span>
+    <span class="pill">Google Ads (PPC)</span>
+    <span class="pill">Meta Ads (Facebook/Instagram)</span>
+    <span class="pill">Content Marketing</span>
+    <span class="pill">Website Design & Development</span>
+</div>
+
+
+           <h4>Your Monthly Marketing Budget</h4>
+<div class="pill-group">
+    <span class="pill">Below ₹25K</span>
+    <span class="pill">₹25K - ₹75K</span>
+    <span class="pill">₹75K - ₹1.5L</span>
+    <span class="pill">Above ₹1.5L</span>
+</div>
+
+
+            <div class="input-row">
+                <input type="text" placeholder="Full Name*" required>
+                <input type="email" placeholder="Email*" required>
+            </div>
+
+           <textarea placeholder="Tell us about your business, target audience, current marketing challenges and goals*" required></textarea>
+
+
+            <div class="file-upload">
+                <label>Attach file (optional)</label>
+                <div class="upload-box">
+                    Choose file or drag & drop here
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Free Marketing Proposal</button>
+
+
+        </form>
+
+    </div>
+
 </section>
 
-<footer>© 2026 SkyGrow Marketing</footer>
-<script>
-/* Page Transition Effect */
-
-document.querySelectorAll("a").forEach(link=>{
-  link.addEventListener("click",function(e){
-
-    if(this.getAttribute("href").includes(".html")){
-      e.preventDefault();
-
-      document.body.style.opacity="0";
-
-      setTimeout(()=>{
-        window.location=this.href;
-      },300);
-    }
-
-  });
-});
-
-
-/* Active Navbar Effect */
-
-const links = document.querySelectorAll("nav a");
-const currentPage = location.pathname.split("/").pop();
-
-links.forEach(link=>{
-  if(link.getAttribute("href") === currentPage){
-    link.classList.add("active");
-  }
-});
-</script>
-
+<!-- FOOTER -->
+<footer id="contact"> 
+<h3>SkyGrow – Digital Marketing Agency</h3>
+<p>Grow smarter. Market better. Achieve more.</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
