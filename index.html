@@ -12,7 +12,7 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<!-- <nav class="navbar">
 <div class="logo">🚀 SkyGrow</div>
 <div class="nav-links">
 <a href="index.html"class="active">Home</a>
@@ -22,6 +22,25 @@
 <a href="pricing.html">Pricing</a>
 <a href="contact.html">Contact</a>
 </div>
+</nav> -->
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🚀 SkyGrow</div>
+
+  <!-- Burger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -72,6 +91,16 @@
 
 <!-- SLIDER SCRIPT -->
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", function() {
+    navLinks.classList.toggle("active");
+  });
+});
+
+
 let slides=document.querySelectorAll(".slide");
 let index=0;
 
