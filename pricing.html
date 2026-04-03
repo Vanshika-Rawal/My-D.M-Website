@@ -13,15 +13,21 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-<div class="logo">🚀 SkyGrow</div>
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="campaigns.html">Campaigns</a>
-<a href="pricing.html" class="active">Pricing</a>
-<a href="contact.html">Contact</a>
-</div>
+  <div class="logo">🚀 SkyGrow</div>
+
+  <!-- Burger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html" >Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="pricing.html" class="active">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -83,7 +89,18 @@
 </section>
 
 <script>
-const toggle = document.getElementById("togglePlan");
+
+
+    
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+
+// const toggle = document.getElementById("togglePlan");
 const prices = document.querySelectorAll(".price");
 
 toggle.addEventListener("change", ()=>{
