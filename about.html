@@ -11,16 +11,21 @@
  <!-- ===== NAVBAR ===== -->
 <nav class="navbar">
   <div class="logo">🚀 SkyGrow</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
+
+  <!-- Burger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html" >Home</a>
     <a href="about.html" class="active">About</a>
     <a href="services.html">Services</a>
     <a href="campaigns.html">Campaigns</a>
     <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" >Contact</a>
   </div>
 </nav>
-
     <!-- Hero Section (NO IMAGE) -->
     <section class="about-hero">
         <div class="hero-content">
@@ -76,6 +81,16 @@
 
     </section>
     
+    <script>
+    
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
  <!-- FOOTER -->
 <footer id="contact"> 
 <h3>SkyGrow – Digital Marketing Agency</h3>
