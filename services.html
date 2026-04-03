@@ -13,15 +13,21 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-<div class="logo">🚀 SkyGrow</div>
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html" class="active">Services</a>
-<a href="campaigns.html">Campaigns</a>
-<a href="pricing.html">Pricing</a>
-<a href="contact.html">Contact</a>
-</div>
+  <div class="logo">🚀 SkyGrow</div>
+
+  <!-- Burger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html" >Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="campaigns.html">Campaigns</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
 
@@ -86,6 +92,15 @@
 
 
 <script>
+
+
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
 const cards = document.querySelectorAll(".service-card");
 const next = document.querySelector(".right");
 const prev = document.querySelector(".left");
